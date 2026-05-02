@@ -192,7 +192,8 @@ export default function Page() {
     .btn-dark:hover{background:${S.brownM}}
     .btn-ghost{background:rgba(255,255,255,.1);color:white;border:1.5px solid rgba(255,255,255,.3);cursor:pointer;font-weight:700;font-family:'Nunito',sans-serif;backdrop-filter:blur(8px);transition:all .2s}
     .btn-ghost:hover{background:rgba(255,255,255,.18)}
-    .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+    .reveal{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease}
+    .reveal-hidden{opacity:0;transform:translateY(28px)}
     .cat-scroll{scrollbar-width:none}.cat-scroll::-webkit-scrollbar{display:none}
     .drawer{transform:translateY(100%);transition:transform .38s cubic-bezier(.32,.72,0,1)}
     .drawer.open{transform:translateY(0)}
@@ -352,7 +353,7 @@ export default function Page() {
   const HomePage = () => (
     <main>
       {/* HERO */}
-      <section style={{ position:'relative', height:'100vh', minHeight:600, overflow:'hidden' }}>
+      <section style={{ position:'relative', height:'100vh', minHeight:600, overflow:'hidden', background:'#1A0A00' }}>
         <video autoPlay muted loop playsInline src="/videos/hero.mp4"
           style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', objectPosition:'center' }} />
         <div style={{ position:'absolute', inset:0, background:'linear-gradient(160deg,rgba(26,10,0,.78) 0%,rgba(26,10,0,.45) 50%,rgba(26,10,0,.7) 100%)' }} />
